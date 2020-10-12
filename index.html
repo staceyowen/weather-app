@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
    <link rel="stylesheet" href="src/style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
    <title>Weather App</title>
 </head>
 <body>
@@ -13,9 +14,7 @@
     <div class="weather-app-wrapper">
       <div class="weather-app">
         <div class="main-weather">
-      <h1>
-        New York
-      </h1>
+      <h1 id="city"></h1>
       <ul>
         <li>
           Sunday 11th October 2020
@@ -23,9 +22,7 @@
         <li>
           13:00
         </li>
-        <li>
-          Sunny
-        </li>
+        <li id="weather-description"></li>
       </ul>
         </div>
       <div class="row">
@@ -37,7 +34,7 @@
                class="float-left"
                />
               <div class="float-left">
-                <strong>12</strong>
+                <strong id="temperature"></strong>
                 <span class="units">°C  |  <a href="#">°F</a></span>
               </div>
             </div>
@@ -45,13 +42,13 @@
         <div class="col-6">
           <ul>
             <li>
-              Precipitation: 0%
+              Humidity: <span id="humidity"></span>%
             </li>
             <li>
-              Humidity: 81%
+              Wind: <span id="wind"></span> <small>KM/H</small>
             </li>
             <li>
-              Wind: 2 mph
+              Feels like: <span id="feels-like"></span>°C
             </li>
           </ul>
         </div>
