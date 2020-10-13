@@ -31,6 +31,7 @@ function displayTemperature(response) {
     let windElement = document.querySelector("#wind");
     let feelslikeElement = document.querySelector("#feels-like");
     let dateElement = document.querySelector("#date");
+    let iconElement = document.querySelector("#icon");
 
     cityElement.innerHTML = response.data.name;
     temperatureElement.innerHTML = Math.round (response.data.main.temp);
@@ -39,7 +40,8 @@ function displayTemperature(response) {
     windElement.innerHTML = Math.round (response.data.wind.speed);
     feelslikeElement.innerHTML = Math.round (response.data.main.feels_like);
     dateElement.innerHTML = formateDate(response.data.dt * 1000);
-
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "dfc2e82cce5dfe54171afee9e327c236";
