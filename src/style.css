@@ -33,7 +33,6 @@ ul {
 .weather-app {
   border: 2px solid #dadde1;
   border-radius: 7px;
-
   padding: 20px;
 }
 
@@ -42,7 +41,10 @@ ul {
 }
 
 .weather-temperature img {
-  margin-right: 15px;
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
 }
 
 .weather-temperature strong {
@@ -63,4 +65,35 @@ ul {
 
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+
+.future-forecast {
+  margin-top: 20px;
+}
+
+.future-forecast h3 {
+  color: #878787;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-bottom: 10px;
+}
+
+.future-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
+
+.future-temperature {
+  text-align: center;
+  color: #878787;
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }
