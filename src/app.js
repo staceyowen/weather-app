@@ -100,7 +100,6 @@ function handleSubmit(event) {
     event.preventDefault();
     let cityInputElement = document.querySelector("#city-input");
     search(cityInputElement.value);
-    console.log(cityInputElement.value);
 }   
 
 function displayFahrenheitTemp(event) {
@@ -130,5 +129,6 @@ let celsiusLink = document.querySelector("#celsius-link");
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
 
 search("London");
