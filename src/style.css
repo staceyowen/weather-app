@@ -1,9 +1,10 @@
 body {
+  background-image: url(https://img3.goodfon.com/original/1440x900/b/dc/kotonoha-no-niva-anime-anime.jpg?d=1);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  color: royalblue;
+  color: rgb(32, 83, 236);
   font-size: 32px;
   font-weight: 800;
   line-height: 28px;
@@ -34,6 +35,13 @@ ul {
 .weather-app {
   background: linear-gradient(135deg, #00c8ff41, hsla(305, 89%, 48%, 0.233));
   border: 2px solid white;
+  border-image: repeating-linear-gradient(
+      40deg,
+      hsla(305, 89%, 48%, 0.233),
+      #00c8ff41,
+      hsla(305, 89%, 48%, 0.233) 20px
+    )
+    60;
   border-radius: 7px;
   padding: 20px;
 }
@@ -80,7 +88,7 @@ ul {
 }
 
 .future-forecast h3 {
-  color: #878787;
+  color: #5a5757;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
@@ -98,7 +106,7 @@ ul {
 
 .future-temperature {
   text-align: center;
-  color: #878787;
+  color: #5a5757;
   font-size: 13px;
   font-weight: 400;
   height: auto;
