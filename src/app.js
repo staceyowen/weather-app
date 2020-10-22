@@ -102,6 +102,22 @@ function handleSubmit(event) {
     search(cityInputElement.value);
 }   
 
+function getCurrentLocation() {
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+function showPosition(position) {
+  let apiKey = `dfc2e82cce5dfe54171afee9e327c236`;
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let unit = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(displayTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayFahrenheitTemp(event) {
     event.preventDefault();
     let fahrenheitTemperature = (celsiusTemperature * 9) / 5+ 32;
@@ -123,6 +139,9 @@ let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let celsiusLink = document.querySelector("#celsius-link");
  celsiusLink.addEventListener("click", displayCelsiusTemp);

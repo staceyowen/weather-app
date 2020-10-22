@@ -8,6 +8,7 @@ h1 {
   font-weight: 800;
   line-height: 28px;
   margin-bottom: 0;
+  padding-top: 10px;
 }
 
 li {
@@ -32,13 +33,19 @@ ul {
 
 .weather-app {
   background: linear-gradient(135deg, #00c8ff41, hsla(305, 89%, 48%, 0.233));
-  border: 2px solid #dadde1;
+  border: 2px solid white;
   border-radius: 7px;
   padding: 20px;
 }
 
 .main-weather {
   margin-bottom: 20px;
+}
+
+.last-updated-info {
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
 }
 
 .weather-temperature img {
@@ -49,7 +56,7 @@ ul {
 }
 
 .weather-temperature strong {
-  font-size: 42px;
+  font-size: 50px;
   font-weight: 300;
   line-height: 1;
 }
@@ -97,4 +104,8 @@ ul {
   height: auto;
   line-height: 15px;
   white-space: nowrap;
+}
+
+.footer {
+  text-align: center;
 }

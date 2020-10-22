@@ -35,7 +35,7 @@
               </div>
               <div class="col-2">
                 <button 
-                  class="btn btn-primary w-100" 
+                  class="btn btn-primary w-100 current-location-btn" 
                   id="current-location-button" 
                   style="border-color: white"
                   type="button">
@@ -47,7 +47,7 @@
         <div class="main-weather">
           <h1 id="city"></h1>
           <ul>
-            <li>
+            <li class="last-updated-info">
               Last updated: <span id="date"></span>
             </li>
             <li id="weather-description"></li>
@@ -90,9 +90,14 @@
         </div>
       </div>
     </div>
+    <div class="footer">
       <small>
-        <a href="https://github.com/staceyowen/weather-app" target="_blank">Open-source code</a> by Stacey Owen
+        <a href="https://github.com/staceyowen/weather-app" target="_blank">
+          Open-source code
+        </a> 
+        by Stacey Owen
       </small>
+    </div>
   </div>
 
   </div>
