@@ -60,7 +60,7 @@ function displayTemperature(response) {
 }
 
 function displayForecast(response) {
-let forecastElement = document.querySelector("#forecast");
+let forecastElement = document.querySelector("#future-forecast");
 forecastElement.innerHTML = null;
 let forecast = null;
 
