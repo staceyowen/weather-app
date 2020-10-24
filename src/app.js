@@ -43,10 +43,14 @@ function displayTemperature(response) {
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
     let feelslikeElement = document.querySelector("#feels-like");
+    let temphighElement = document.querySelector("#temp-high")
+    let templowElement = document.querySelector("#temp-low")
     let dateElement = document.querySelector("#date");
     let iconElement = document.querySelector("#icon");
 
     celsiusTemperature = response.data.main.temp;
+
+    console.log(response.data)
 
     cityElement.innerHTML = response.data.name;
     temperatureElement.innerHTML = Math.round (celsiusTemperature);
@@ -54,6 +58,8 @@ function displayTemperature(response) {
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round (response.data.wind.speed);
     feelslikeElement.innerHTML = Math.round (response.data.main.feels_like);
+    temphighElement.innerHTML = Math.round (response.data.main.temp_max);
+    templowElement.innerHTML = Math.round (response.data.main.temp_min);
     dateElement.innerHTML = formateDate(response.data.dt * 1000);
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", response.data.weather[0].description);

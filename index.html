@@ -7,6 +7,7 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
    <link rel="stylesheet" href="src/style.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://kit.fontawesome.com/5d9c7dbd2e.js" crossorigin="anonymous"></script>
    <title>Weather App</title>
 </head>
 <body>
@@ -23,6 +24,7 @@
                 id="city-input"
                 placeholder="Type a city"
                 style="border-color: white"
+                
               />
              </div>
               <div class="col-3">
@@ -71,16 +73,28 @@
              </div>
            </div>
         </div>
-        <div class="col-6">
-          <ul>
+        <div class="col-3">
+          <ul class="weather-listed-info">
             <li>
-              Humidity: <span id="humidity"></span>%
+              <i class="fas fa-tint"></i> Humidity: <span id="humidity"></span>%
             </li>
             <li>
-              Wind: <span id="wind"></span> <small>km/h</small>
+              <i class="fas fa-wind"></i> Wind: <span id="wind"></span> <small>km/h</small>
             </li>
             <li>
-              Feels like: <span id="feels-like"></span>°C
+              <i class="far fa-smile"></i> Feels like: <span id="feels-like"></span>°C
+            </li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul class="weather-listed-info">
+            <li>
+              <i class="fas fa-temperature-high"></i>
+              High <span id="temp-high"></span> °C
+            </li>
+            <li>
+              <i class="fas fa-temperature-low"></i>
+              Low <span id="temp-low"></span> °C
             </li>
           </ul>
         </div>

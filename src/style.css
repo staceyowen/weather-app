@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-  color: rgb(32, 83, 236);
+  color: rgb(16, 74, 250);
   font-size: 32px;
   font-weight: 800;
   line-height: 28px;
@@ -47,6 +47,7 @@ ul {
 }
 
 .main-weather {
+  color: black;
   margin-bottom: 20px;
 }
 
@@ -64,6 +65,7 @@ ul {
 }
 
 .weather-temperature strong {
+  color: black;
   font-size: 50px;
   font-weight: 300;
   line-height: 1;
@@ -79,8 +81,9 @@ ul {
   cursor: default;
 }
 
-.weather-temperature .active:hover {
-  text-decoration: none;
+.weather-listed-info {
+  color: #0e0d0d;
+  font-size: 13px;
 }
 
 .future-forecast {
@@ -88,7 +91,7 @@ ul {
 }
 
 .future-forecast h3 {
-  color: #5a5757;
+  color: #4b4747;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
@@ -106,7 +109,7 @@ ul {
 
 .future-temperature {
   text-align: center;
-  color: #5a5757;
+  color: #4b4747;
   font-size: 13px;
   font-weight: 400;
   height: auto;
