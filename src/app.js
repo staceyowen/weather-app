@@ -61,7 +61,7 @@ function displayTemperature(response) {
     temphighElement.innerHTML = Math.round (response.data.main.temp_max);
     templowElement.innerHTML = Math.round (response.data.main.temp_min);
     dateElement.innerHTML = formateDate(response.data.dt * 1000);
-    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
@@ -78,7 +78,7 @@ for (let index = 0; index < 6; index++) {
           ${formatHours(forecast.dt * 1000)}
         </h3>
         <img 
-        src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" 
+        src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" 
         alt="weather"
         />
         <div class="future-temperature">
@@ -98,7 +98,7 @@ function search(city) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
     axios.get(apiUrl).then(displayTemperature);
 
-    apiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${unit}`;
+    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(displayForecast);
 }
 
